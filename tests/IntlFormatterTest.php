@@ -52,9 +52,9 @@ class IntlFormatterTest extends \PHPUnit_Framework_TestCase
      */
     public function testMoneyObjectCanBeFormattedAsString()
     {
-        $f = new IntlFormatter('de_DE');
-        $m = new Money(100, new Currency('EUR'));
+        $f = new IntlFormatter('en_US');
+        $m = new Money(100, new Currency('USD'));
 
-        $this->assertEquals('1,00 €', $f->format($m));
+        $this->assertEquals('$1.00', $f->format($m));
     }
 }
